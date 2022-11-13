@@ -5,8 +5,9 @@ Tuwaiq Bootcamp | Final project
 ## Project Name
 Outfit Session
 
+
 ## Project Description:
-"Outfit Session": A website that brings together all fashion designers and looks experts to help users who want costumes designed for their occasions by experts without any effort.
+A website that brings together all fashion designers and looks experts to help users who want costumes designed for their occasions by experts without any effort.
 
 
 ## Features List:
@@ -18,16 +19,13 @@ Outfit Session
 ## Define the pages
 - Home 
 - About 
-- Sing up
+- Sing up 
 - Login 
-- Designers info 
-- Designer profile
-- Client Profile
-- Hiring a designer
+- Designer profile 
+- Client Profile 
 - Browse designer information 
+- Hiring a designer
 - Edit profile or accept appointments 
-- Designer appointment 
-- Contact 
 
 
 ## Define which group/s with access to each page 
@@ -35,14 +33,11 @@ Outfit Session
 - About (All)
 - Sing up (All)
 - Login (All)
-- Designers info (All)
 - Designer profile (All)
-- Client Profile ( All *if the client allows it)
-- Hiring a designer (client)
+- Client Profile (All)
 - Browse designer information (All)
-- Edit profile or accept appointments (Designer, Admin)
-- Designer appointment (client)
-- Contact (All)
+- Hiring a designer (client)
+- Edit profile or accept appointments (Designer)
 
 
 
