@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block content %}
+
+<div class="home" id="home">
+<div class="designers-title" id="home">
+  <h1>Status</h1>  
+</div>
+<div class="login-card">
+    <form  method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class = 'btn_create' type="submit">Create</button>
+    </form>
+</div>
+</div>
+
+
+
+{% endblock content %}
+
+
+
+

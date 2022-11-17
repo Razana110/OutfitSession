@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block content %}
+
+<div class="designers-title" id="home">
+  <h1>Designer Profile</h1>  
+</div>
+
+<div class="designer_container_specified">
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no" alt="Person" class="card__image">
+      <p class="card__name">{{designer.name}}</p>
+      <div class="grid-container">
+        <p>{{designer.country}},</p>
+        <p>{{designer.age}} years old,</p>
+        <p>{{designer.email}}</p>  
+      </div>
+      <div class = "desc">
+       {{designer.description}}
+      </div>
+      <a class="btn-designer" href="{% url 'hire_page' designer.id %}">Hire</a>
+    </div>
+  </div>
+
+{% endblock content %}
+

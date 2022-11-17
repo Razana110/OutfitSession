@@ -1,0 +1,23 @@
+<header>
+  <ul class="navbar">
+    <div class = 'navbar-main'>
+      <a href="{% url "home_page" %}"><li>OutFit Session</li></a>
+    </div>
+    
+    <div class="navbar-log">
+      {% if request.user.is_superuser %}
+      <a href="{% url 'session_page' %}"><li>My Sessions</li></a>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'designers_page' %}"><li>Designers</li></a>
+      <a href="{% url 'home_page' %}"><li>Welcome {{request.user}}</li></a>
+      <a href="{% url 'logout_page' %}"><li>logout</li></a>
+      {% else %}
+      <a href="{% url 'register_page' %}"><li>SignUp</li></a>
+      <a href="{% url 'login_page' %}"><li>login</li></a>
+      {% endif %}
+    </div>
+  </ul>
+</header>
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block content %}
+
+<div class="designers-title" id="home">
+  <h1>Designers</h1>  
+</div>
+
+
+<div class="designer_container">
+    {% for designer in designers %}
+    <div class="card">
+      <img src="https://images.pexels.com/photos/6461078/pexels-photo-6461078.jpeg" alt="Person" class="card__image">
+      <p class="card__name">{{designer.name}}</p>
+      <div class="grid-container">
+        <div class="grid-child-posts">
+            {{designer.email}}
+        </div>
+      </div>
+      <a class="btn-designer" href="{% url 'designer_page' designer.id %}">Details</a>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

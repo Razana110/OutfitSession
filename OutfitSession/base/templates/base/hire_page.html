@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block content %}
+{% load static %}
+<script src="{% url 'js-catlog' %}"></script>
+<script src="{% static '/admin/js/core.js' %}"></script>
+<link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'styles/base.css' %}"
+    />
+<link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+
+<div class="designers-title" id="home">
+  <h1>Schedule a Meeting With</h1>  
+</div>
+<div class="group-schedual" >
+  <p class = "name">{{designer.name}}</p>
+<div class="register-card-schedual">
+<form method="POST" action="">
+{% csrf_token %}
+{{ form.media }}
+{{form.as_p}}
+<button class = 'btn_create' type="submit">Submit</button>
+</form>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>{{title}}</title>{% endblock title %}
+
+{% block content %}
+
+<div class="designers-title" id="home">
+  <h1>Sessions</h1>  
+   {% for dt in dts %}
+</div>
+<div class= "Session-main">
+    <div class = "Session-card">
+        {{dt.date}}
+        {{dt.time}}
+        <mark>{{dt.status}}</mark>
+        <a class = 'btn_create' type="submit" href = "{% url 'status_page' dt.id %}">Status</a>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}
